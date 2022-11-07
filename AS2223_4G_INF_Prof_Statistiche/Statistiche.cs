@@ -8,10 +8,10 @@ namespace AS2223_4G_INF_Prof_Statistiche
 {
     public class Statistiche
     {
-        int sommaValori = 0;
-        int numeroValori = 0;
-        double valoriConPeso = 0; 
-        double pesoValori = 0;
+        int sommaValori = 0; //salvo i valori SENZA peso
+        int numeroValori = 0; //salvo il totale dei numeri SENZA peso
+        double sommaValoriConPeso = 0; //salvo il totale dei numeri CON il peso
+        double sommaPesoValori = 0; //salvo il totale dei pesi 
         public Statistiche()
         {
 
@@ -34,8 +34,12 @@ namespace AS2223_4G_INF_Prof_Statistiche
         /// <param name="peso"></param>
         public void AddValue(int valore, double peso)
         {
-            pesoValori = pesoValori + peso;
-            valoriConPeso = valore * peso;
+            sommaValori = sommaValori + valore;
+            numeroValori++;
+
+            sommaPesoValori = sommaPesoValori + peso;
+            sommaValoriConPeso = valore * peso;
+            
         }
 
         /// <summary>
@@ -55,7 +59,7 @@ namespace AS2223_4G_INF_Prof_Statistiche
         /// <returns></returns>
         public double MediaPonderata()
         {
-
+            return sommaValoriConPeso / sommaPesoValori;
         }
 
         /// <summary>
@@ -63,7 +67,10 @@ namespace AS2223_4G_INF_Prof_Statistiche
         /// </summary>
         public void ClearValue()
         {
-
+            sommaValori = 0; 
+            numeroValori = 0; 
+            sommaValoriConPeso = 0; 
+            sommaPesoValori = 0;
         }
 
         /// <summary>
@@ -72,7 +79,7 @@ namespace AS2223_4G_INF_Prof_Statistiche
         /// <returns></returns>
         public int CountValue()
         {
-
+            return numeroValori; 
         }
 
     }
