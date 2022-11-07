@@ -8,7 +8,7 @@ namespace AS2223_4G_INF_Prof_Statistiche
 {
     public class Statistiche
     {
-        int sommaValori = 0; //salvo i valori SENZA peso
+        double sommaValori = 0; //salvo i valori SENZA peso
         int numeroValori = 0; //salvo il totale dei numeri SENZA peso
         double sommaValoriConPeso = 0; //salvo il totale dei numeri CON il peso
         double sommaPesoValori = 0; //salvo il totale dei pesi 
