@@ -38,7 +38,7 @@ namespace AS2223_4G_INF_Prof_Statistiche
             numeroValori++;
 
             sommaPesoValori = sommaPesoValori + peso;
-            sommaValoriConPeso = valore * peso;
+            sommaValoriConPeso = sommaValoriConPeso + valore * peso;
             
         }
 
