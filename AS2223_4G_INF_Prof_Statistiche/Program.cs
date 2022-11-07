@@ -25,7 +25,7 @@
 // - Consegnare il nome del repository pubblico github del progetto con almeno 5 commit intercalati nel tempo
 
 
-Console.WriteLine("Prof; 4G INF; AS 22/23 07/11/22; Gestione statistiche");
+Console.WriteLine("Bunardziu Vehap; 4G INF; AS 22/23 07/11/22; Gestione statistiche");
 
 Statistiche s = new Statistiche();
 
